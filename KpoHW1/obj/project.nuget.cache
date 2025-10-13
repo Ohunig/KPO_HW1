@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "tuXQ/mlm7Gg=",
+  "success": true,
+  "projectFilePath": "/Users/user/RiderProjects/KpoHW1/KpoHW1/KpoHW1.csproj",
+  "expectedPackageFiles": [
+    "/Users/user/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.9/microsoft.extensions.dependencyinjection.9.0.9.nupkg.sha512",
+    "/Users/user/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.9/microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

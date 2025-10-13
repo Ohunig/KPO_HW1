@@ -1,0 +1,15 @@
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/KpoHW1
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/KpoHW1.deps.json
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/KpoHW1.runtimeconfig.json
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/KpoHW1.dll
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/KpoHW1.pdb
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.AssemblyInfoInputs.cache
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.AssemblyInfo.cs
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.csproj.CoreCompileInputs.cache
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.sourcelink.json
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.dll
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/refint/KpoHW1.dll
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.pdb
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.genruntimeconfig.cache
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/ref/KpoHW1.dll
