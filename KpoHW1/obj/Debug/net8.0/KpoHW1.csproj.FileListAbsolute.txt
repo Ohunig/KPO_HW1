@@ -13,3 +13,7 @@
 /Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.pdb
 /Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.genruntimeconfig.cache
 /Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/ref/KpoHW1.dll
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/user/RiderProjects/KpoHW1/KpoHW1/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.csproj.AssemblyReference.cache
+/Users/user/RiderProjects/KpoHW1/KpoHW1/obj/Debug/net8.0/KpoHW1.csproj.Up2Date

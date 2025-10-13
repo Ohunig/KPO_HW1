@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KpoHW1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+909aa51b63ef372933cdb5d6ea515809d1dcf23a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+209d3626b0557ed23b0e2171adae0e3428673a16")]
 [assembly: System.Reflection.AssemblyProductAttribute("KpoHW1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KpoHW1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

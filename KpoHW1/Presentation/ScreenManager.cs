@@ -22,7 +22,7 @@ public class StandardScreenManager : IScreenManager
             ClearScreen();
             if (Screens.Length <= (int)ScreenStack.Peek())
             {
-                throw new Exception("Screen is not available");
+                throw new Exception("Экран недоступен");
             }
             IScreen screen = Screens[(int)ScreenStack.Peek()];
             screen.Render();
@@ -34,7 +34,7 @@ public class StandardScreenManager : IScreenManager
                 case ScreenActionType.Next:
                     if (action.TypeScreen is null)
                     {
-                        throw new Exception("Screen type cannot be null");
+                        throw new Exception("Тип экрана не может быть null");
                     }
                     Push(action.TypeScreen.Value);
                     break;

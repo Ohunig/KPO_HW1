@@ -25,13 +25,11 @@ public class InventoryReportScreen : IScreen
         foreach (Animal animal in animals)
         {
             Builder.PushLine($"ID: {animal.Number}\nИмя: {animal.Name}\nВид: {animal.Type.ToString()}\n");
-            Builder.PushLine("");
         }
         Builder.PushLine("Предметы:");
         foreach (Thing thing in things)
         {
             Builder.PushLine($"ID: {thing.Number}\nПредмет: {thing.Type.ToString()}\n");
-            Builder.PushLine("");
         }
         Builder.PushLine($"Всего инвентаря: {animals.Count + things.Count}");
         ConsoleManager.Print(Builder.Build());
