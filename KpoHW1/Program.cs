@@ -2,7 +2,9 @@
 using KpoHW1.DI;
 using Microsoft.Extensions.DependencyInjection;
 
+
 var serviceProvider = CompositionRoot.Services;
+// Получение DI-контейнера
 IScreenManager screenManager = serviceProvider.GetRequiredService<IScreenManager>();
 try
 {
