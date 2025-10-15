@@ -1,13 +1,30 @@
 namespace KpoHW1;
 
+/// <summary>
+/// Стандартный менеджер экранов
+/// </summary>
 public class StandardScreenManager : IScreenManager
 {
+    /// <summary>
+    /// Список экранов
+    /// </summary>
     private IScreen[] Screens { get; }
 
+    /// <summary>
+    /// Стартовый экран
+    /// </summary>
     private ScreenType StartScreen { get; }
     
+    /// <summary>
+    /// Стек экранов
+    /// </summary>
     private Stack<ScreenType> ScreenStack { get; }
 
+    /// <summary>
+    /// Стандартный конструктор
+    /// </summary>
+    /// <param name="screens">Список экранов</param>
+    /// <param name="startScreen">Стартовый экран</param>
     public StandardScreenManager(IScreen[] screens, ScreenType startScreen)
     {
         Screens = screens;
@@ -16,6 +33,10 @@ public class StandardScreenManager : IScreenManager
         ScreenStack.Push(startScreen);
     }
     
+    /// <summary>
+    /// Рендерит верхний экран на стеке
+    /// </summary>
+    /// <exception cref="Exception">Ошибки связанные с отображением экранов</exception>
     public void Render() 
     {
         while (ScreenStack.Count > 0) {
@@ -26,7 +47,9 @@ public class StandardScreenManager : IScreenManager
             }
             IScreen screen = Screens[(int)ScreenStack.Peek()];
             screen.Render();
+            // Обработка пользовательских действий
             ScreenAction action = screen.HandleScreenAction();
+            // Обработка экранных событий
             switch (action.ActionType)
             {
                 case ScreenActionType.Nothing:
@@ -58,16 +81,27 @@ public class StandardScreenManager : IScreenManager
         ClearScreen();
     }
 
+    /// <summary>
+    /// Добавление экрана в стек
+    /// </summary>
+    /// <param name="screen">Экран</param>
     public void Push(ScreenType screen)
     {
         ScreenStack.Push(screen);
     }
 
+    /// <summary>
+    /// Удаляет экран с вершины стека
+    /// </summary>
+    /// <returns>Тип удалённого экрана</returns>
     public ScreenType Pop()
     {
         return ScreenStack.Pop();
     }
 
+    /// <summary>
+    /// Очистка консоли
+    /// </summary>
     public void ClearScreen()
     {
         Console.Clear();

@@ -4,8 +4,14 @@ using KpoHW1.Domain.Entities.Things.Types;
 
 namespace KpoHW1.Screens;
 
+/// <summary>
+/// Экран меню добавления предметов
+/// </summary>
 public class AddThingScreen : IScreen
 {
+    /// <summary>
+    /// Класс констант
+    /// </summary>
     private static class Constants
     {
         public const String ChooseThingType = "Выберите один из предметов: ";
@@ -13,12 +19,27 @@ public class AddThingScreen : IScreen
         public const String IncorrectData = "Введены неверные данные";
     }
     
+    /// <summary>
+    /// Менеджер инвентаризационных номеров
+    /// </summary>
     private IInventoryNumberManager InventoryNumberManager { get; }
     
+    /// <summary>
+    /// Консольный менеджер
+    /// </summary>
     private IConsoleManager ConsoleManager { get; }
     
+    /// <summary>
+    /// Зоопарк
+    /// </summary>
     private Zoo Zoo { get; }
     
+    /// <summary>
+    /// Стандартный конструктор
+    /// </summary>
+    /// <param name="inventoryNumberManager">Менеджер номеров</param>
+    /// <param name="consoleManager">Консольный менеджер</param>
+    /// <param name="zoo">Зоопарк</param>
     public AddThingScreen(IInventoryNumberManager inventoryNumberManager, IConsoleManager consoleManager,  Zoo zoo)
     {
         ConsoleManager = consoleManager;
@@ -26,6 +47,9 @@ public class AddThingScreen : IScreen
         Zoo = zoo;
     }
 
+    /// <summary>
+    /// Отрисовка экрана
+    /// </summary>
     public void Render()
     {
         StringBuilder stringBuilder = new StringBuilder();
@@ -37,6 +61,10 @@ public class AddThingScreen : IScreen
         ConsoleManager.Print(stringBuilder.ToString());
     }
 
+    /// <summary>
+    /// Обработка действий пользователя
+    /// </summary>
+    /// <returns>Экранное событие</returns>
     public ScreenAction HandleScreenAction()
     {
         int? command = ConsoleManager.GetIntResponse(Constants.ChooseThingType);
@@ -50,6 +78,12 @@ public class AddThingScreen : IScreen
         return ScreenAction.Previous();
     }
 
+    /// <summary>
+    /// Создаёт вещь
+    /// </summary>
+    /// <param name="type">Тип вещи</param>
+    /// <param name="number">Номер</param>
+    /// <returns>Вещь</returns>
     private Thing? CreateThing(ThingType type, int number)
     {
         switch (type)
@@ -63,6 +97,9 @@ public class AddThingScreen : IScreen
         }
     }
     
+    /// <summary>
+    /// Отображение сообщения о некорректных данных
+    /// </summary>
     private void IncorrectData()
     {
         ConsoleManager.PrintError(Constants.IncorrectData);

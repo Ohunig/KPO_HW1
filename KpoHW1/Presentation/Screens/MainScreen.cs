@@ -2,15 +2,28 @@ using System.Text;
 
 namespace KpoHW1.Screens;
 
+/// <summary>
+/// Главный экран
+/// </summary>
 public class MainScreen : IScreen
 {
+    /// <summary>
+    /// Консольный менеджер
+    /// </summary>
     private IConsoleManager ConsoleManager { get; }
 
+    /// <summary>
+    /// Конструктор главного экрана
+    /// </summary>
+    /// <param name="consoleManager">Консольный менеджер</param>
     public MainScreen(IConsoleManager consoleManager)
     {
         ConsoleManager = consoleManager;
     }
 
+    /// <summary>
+    /// Отрисовка главного экрана
+    /// </summary>
     public void Render()
     {
         StringBuilder stringBuilder = new StringBuilder();
@@ -23,6 +36,10 @@ public class MainScreen : IScreen
         ConsoleManager.Print(stringBuilder.ToString());
     }
 
+    /// <summary>
+    /// Обработка пользовательских действий
+    /// </summary>
+    /// <returns>Экранное событие</returns>
     public ScreenAction HandleScreenAction()
     {
         int? command = ConsoleManager.GetIntResponse("Выберите действие: ");

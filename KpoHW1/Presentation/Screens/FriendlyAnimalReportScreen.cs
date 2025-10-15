@@ -1,13 +1,31 @@
 namespace KpoHW1.Screens;
 
+/// <summary>
+/// Экран отображения отчёта о дружелюбных животных
+/// </summary>
 public class FriendlyAnimalReportScreen : IScreen
 {
+    /// <summary>
+    /// Сборщик отчётов
+    /// </summary>
     private IReportBuilder Builder { get; }
     
+    /// <summary>
+    /// Консольный менеджер
+    /// </summary>
     private IConsoleManager ConsoleManager { get; }
     
+    /// <summary>
+    /// Зоопарк
+    /// </summary>
     private Zoo Zoo { get; }
 
+    /// <summary>
+    /// Стандартный конструктор
+    /// </summary>
+    /// <param name="builder">Сборщик отчётов</param>
+    /// <param name="consoleManager">Консольный менеджер</param>
+    /// <param name="zoo">Зоопарк</param>
     public FriendlyAnimalReportScreen(IReportBuilder builder, IConsoleManager consoleManager, Zoo zoo)
     {
         Builder = builder;
@@ -15,6 +33,9 @@ public class FriendlyAnimalReportScreen : IScreen
         Zoo = zoo;
     }
 
+    /// <summary>
+    /// Отрисовка экрана
+    /// </summary>
     public void Render()
     {
         int friendlyAnimals = 0;
@@ -32,6 +53,10 @@ public class FriendlyAnimalReportScreen : IScreen
         ConsoleManager.Print(Builder.Build());
     }
 
+    /// <summary>
+    /// Обработка пользовательских действий
+    /// </summary>
+    /// <returns>Экранное событие</returns>
     public ScreenAction HandleScreenAction()
     {
         ConsoleManager.WaitButtonPress();
